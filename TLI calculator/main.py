@@ -1,11 +1,30 @@
 import os
-from . import cal
 
-if __name__ == "__main__":
-    operating_system = os.name
+import calculator as cal
 
-    match operating_system:
-        case "nt": os.system("clear")
-        case "posix": os.system("cls")
+print(25*"=")
+print("Kalkulator Sederhana".center(25))
+print(25*"=" + "\n")
 
-    
+angka_1 = float(input("masukan angka 1 = "))
+operator = input("operator (+,-,x,/) : ")
+angka_2 = float(input("masukan angka 2 = "))
+
+# percabangannya
+
+if operator == "+":
+	hasil = angka_1 + angka_2
+	print(f"hasilnya adalah {hasil}")
+elif operator == "-":
+	hasil = angka_1 - angka_2
+	print(f"hasilnya adalah {hasil}")
+elif operator == "x" or operator == "*":
+	hasil = angka_1 * angka_2
+	print(f"hasilnya adalah {hasil}")
+elif operator == "/":
+	hasil = angka_1 / angka_2
+	print(f"hasilnya adalah {hasil}")
+else:
+	print("masukan yang bener dong!, aku pusying")
+
+print("Akhir dari program, terima gajih!")
