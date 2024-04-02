@@ -1,30 +1,60 @@
+# # import calculator as cal
 import os
 
-import calculator as cal
+def heading():
+    operating_system = os.name
+    match operating_system:
+        case "posix": os.system("clear")
+        case "nt": os.system("cls")
 
-print(25*"=")
-print("Kalkulator Sederhana".center(25))
-print(25*"=" + "\n")
+    print(25*"=")
+    print("TLI calculator".center(25))
+    print(25*"=" + "\n")
 
-angka_1 = float(input("masukan angka 1 = "))
-operator = input("operator (+,-,x,/) : ")
-angka_2 = float(input("masukan angka 2 = "))
+while(True):
+    heading()
 
-# percabangannya
+    # ambil input
+    angka1 = float(input(" "))
+    heading()
+    operator = input(f"{angka1} ")
+    heading()
+    angka2 = float(input(f"{angka1} {operator} "))
 
-if operator == "+":
-	hasil = angka_1 + angka_2
-	print(f"hasilnya adalah {hasil}")
-elif operator == "-":
-	hasil = angka_1 - angka_2
-	print(f"hasilnya adalah {hasil}")
-elif operator == "x" or operator == "*":
-	hasil = angka_1 * angka_2
-	print(f"hasilnya adalah {hasil}")
-elif operator == "/":
-	hasil = angka_1 / angka_2
-	print(f"hasilnya adalah {hasil}")
-else:
-	print("masukan yang bener dong!, aku pusying")
+    match operator:
+        case "+": hasil = angka1 + angka2
+        case "-": hasil = angka1 - angka2
+        case  "/": hasil = angka1 / angka2
+        case operator if "*" or "x": hasil = angka1*angka2
+    # print(hasil)
 
-print("Akhir dari program, terima gajih!")
+    print(f"{angka1} {operator} {angka2} = {hasil}")
+
+    input("pause")
+    
+
+#         # print(25*"=")
+#         # print("TLI calculator".center(25))
+#         # print(25*"=" + "\n")
+
+
+#         # angka_1 = float(input(" "))
+#         # operator = input(f"{angka_1} ")
+#         # angka_2 = float(input(f"{angka_1} {operator} "))
+
+#         # # percabangannya
+
+#         # if operator == "+":
+#         #     hasil = angka_1 + angka_2
+#         #     print(f"hasilnya adalah {hasil}")
+#         # elif operator == "-":
+#         #     hasil = angka_1 - angka_2
+#         #     print(f"hasilnya adalah {hasil}")
+#         # elif operator == "x" or operator == "*":
+#         #     hasil = angka_1 * angka_2
+#         #     print(f"hasilnya adalah {hasil}")
+#         # elif operator == "/":
+#         #     hasil = angka_1 / angka_2
+#         #     print(f"hasilnya adalah {hasil}")
+
+# print(50.0 / 5.0)
