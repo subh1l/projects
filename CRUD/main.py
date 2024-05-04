@@ -26,7 +26,8 @@ if __name__ == "__main__":
         print("1. Create Data")
         print("2. Read Data")
         print("3. Update Data")
-        print("4. Delete Data\n")
+        print("4. Delete Data")
+        print("5. exit\n")
 
         user_option = input("Option: ")
 
@@ -36,6 +37,7 @@ if __name__ == "__main__":
             case "2": crud.read_terminal()
             case "3": crud.update_terminal()
             case "4": crud.delete_terminal()
+            case "5": exit()
               
         finish = input("Are you done?[Y/n]")
         if finish == "y" or finish == "Y":
