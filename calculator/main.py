@@ -13,52 +13,50 @@ if __name__ == "__main__":
         print(25*"=")
 
         while(True):
-            num1 = input('first number: ')
-            if num1 == 'ans':
+            num1 = input("first number: ")
+            if num1 == "ans":
                 try:
                     num1 = result
                     break
                 except:
                     num1 = 0
-            if num1 != 'ans':
+            elif num1 != "ans":
                 try:
-                    int(num1)
-                    break
-                except:
-                    print('must be number')
-                    continue
-            
-        operator = input("operator[+,-,*,/,root,sqr,pow]: ")
-        if operator == "root" or operator == "sqr":
-            pass
-        else:
-            while(True):
-                try:
-                    num2 = int(input("second number: "))
+                    num1 = float(num1)
                     break
                 except:
                     print("must be number")
                     continue
-                
 
-        confirm = input("Are you sure?[Y/n]")
-        if confirm == "n":
-            continue
-        else:
-            match operator:
-                case "+": result = num1 + num2
-                case "-": result = num1 - num2
-                case "*": result = num1*num2
-                case "/": result = num1 / num2
-                case "root": result = math.sqrt(num1)
-                case "sqr": result = num1*num1
-                case "pow": result = num1**num2
-
+        while(True):
+            operator = input("operator[+,-,*,/,root,sqr]: ")
             if operator == "root" or operator == "sqr":
-                print(f"\n{operator} {num1} = {result}")
-            else:
-                print(f"\n{num1} {operator} {num2} = {result}")
-
-            finished = input("finish?[Y/n]")
-            if finished == "Y" or finished == "y":
                 break
+            elif operator == "+" or operator == "-" or operator == "*" or operator == "/":
+                while(True):
+                    try:
+                        num2 = float(input("second number: "))
+                        break
+                    except:
+                        print("must be number")
+                        continue
+                break
+            else:
+                print("Invalid operator")
+                
+        match operator:
+            case "+": result = num1 + num2
+            case "-": result = num1 - num2
+            case "*": result = num1*num2
+            case "/": result = num1 / num2
+            case "root": result = math.sqrt(num1)
+            case "sqr": result = num1*num1
+
+        if operator == "root" or operator == "sqr":
+            print(f"\n{operator}({num1}) = {result}")
+        else:
+            print(f"\n{num1} {operator} {num2} = {result}")
+
+        finished = input("finish?[Y/n]")
+        if finished == "Y" or finished == "y":
+            break

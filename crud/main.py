@@ -1,5 +1,5 @@
 import os
-import crud as crud
+import CRUD as CRUD
 
 if __name__ == "__main__":
     operating_system = os.name
@@ -12,7 +12,7 @@ if __name__ == "__main__":
     print("CRUD PROJECT")
     print("=============================")    
 
-    crud.init_terminal()
+    CRUD.init_terminal()
 
     while(True):
         match operating_system:
@@ -33,10 +33,10 @@ if __name__ == "__main__":
 
 
         match user_option:
-            case "1": crud.create_terminal()
-            case "2": crud.read_terminal()
-            case "3": crud.update_terminal()
-            case "4": crud.delete_terminal()
+            case "1": CRUD.create_terminal()
+            case "2": CRUD.read_terminal()
+            case "3": CRUD.update_terminal()
+            case "4": CRUD.delete_terminal()
             case "5": exit()
               
         finish = input("Are you done?[Y/n]")

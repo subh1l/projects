@@ -1,0 +1,9 @@
+#ignore videos
+*.mp4
+*.mkv
+
+# ignore list
+list
+
+# ignore cache
+**/__pycache__
