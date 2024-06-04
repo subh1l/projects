@@ -1,5 +1,5 @@
 import os
-import CRUD as CRUD
+import crud as crud
 
 if __name__ == "__main__":
     operating_system = os.name
@@ -8,20 +8,22 @@ if __name__ == "__main__":
             case "posix": os.system("clear")
             case "nt": os.system("cls")
 
-    print("WELCOME TO THE")
-    print("CRUD PROJECT")
-    print("=============================")    
+    print("="*25)    
+    print("WELCOME TO THE".center(25))
+    print("crud PROJECT".center(25))
+    print("="*25)    
 
-    CRUD.init_terminal()
+    crud.init_terminal()
 
     while(True):
         match operating_system:
             case "posix": os.system("clear")
             case "nt": os.system("cls")
 
-        print("WELCOME TO THE")
-        print("CRUD PROJECT")
-        print("=============================")
+        print("="*25)    
+        print("WELCOME TO THE".center(25))
+        print("crud PROJECT".center(25))
+        print("="*25)
 
         print("1. Create Data")
         print("2. Read Data")
@@ -33,10 +35,10 @@ if __name__ == "__main__":
 
 
         match user_option:
-            case "1": CRUD.create_terminal()
-            case "2": CRUD.read_terminal()
-            case "3": CRUD.update_terminal()
-            case "4": CRUD.delete_terminal()
+            case "1": crud.create_terminal()
+            case "2": crud.read_terminal()
+            case "3": crud.update_terminal()
+            case "4": crud.delete_terminal()
             case "5": exit()
               
         finish = input("Are you done?[Y/n]")

@@ -26,7 +26,6 @@ if __name__ == "__main__":
                     break
                 except:
                     print("must be number")
-                    continue
 
         while(True):
             operator = input("operator[+,-,*,/,root,sqr]: ")
@@ -39,7 +38,6 @@ if __name__ == "__main__":
                         break
                     except:
                         print("must be number")
-                        continue
                 break
             else:
                 print("Invalid operator")
